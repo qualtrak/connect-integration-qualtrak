@@ -1,11 +1,14 @@
 global:
   marketplace-ami: false
-  owner: quickstart@amazon.com
+  owner: garrard.kitchen@qualtrak.com
   qsname: connect-integration-qualtrak
   regions:
   - us-east-1
   reporting: true
 tests:
-  amazonconnect:
-    parameter_input: evaluate-amazonconnect-json.json
-    template_file: evaluate-amazonconnect-json.template
+  #amazonconnect:
+  #  parameter_input: evaluate-amazonconnect-json.json
+  #  template_file: evaluate-amazonconnect-json.template
+  evaluate-json:
+    parameter_input: evaluate-json.json
+    template_file: evaluate-json.template
