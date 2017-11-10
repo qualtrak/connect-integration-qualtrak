@@ -265,11 +265,11 @@
             "Type": "AWS::EC2::KeyPair::KeyName"
         },
         "PrivateSubnetID": {
-            "Description": "List of Subnets",
+            "Description": "Select at least one private subnet",
             "Type": "List<AWS::EC2::Subnet::Id>"            
         },
         "PublicSubnetID": {
-            "Description": "List of Subnets",
+            "Description": "Select at least one public subnet",
             "Type": "List<AWS::EC2::Subnet::Id>"
         },       
         "QSS3BucketName": {
@@ -496,11 +496,11 @@
                     "Fn::Sub": "https://${QSS3BucketName}.s3.amazonaws.com/${QSS3KeyPrefix}templates/datastreaming.template"
                 },
                 "Parameters": {
-                    "PrivateSubnetID": {
-                        "Ref" : "PrivateSubnetID"                        
+                    "PrivateSubnetID": {                                               
+                        "Fn::Join" : [ ",", { "Ref" : "PrivateSubnetID"  }] 
                     },
                     "PublicSubnetID": {
-                        "Ref" : "PublicSubnetID"
+                        "Fn::Join" : [ ",", { "Ref" : "PublicSubnetID" }] 
                     },
                     "DBName": {
                         "Ref": "DBName"
