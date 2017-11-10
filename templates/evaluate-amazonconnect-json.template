@@ -690,8 +690,7 @@
                 "ElasticsearchDomain",
                 "FirehoseRole"          
             ],
-            "Properties" : {
-                "DeliveryStreamName": "connect-ctr-to-rs",
+            "Properties" : {                
                 "DeliveryStreamType" : "KinesisStreamAsSource",
                 "KinesisStreamSourceConfiguration" : {
                     "KinesisStreamARN" : {
