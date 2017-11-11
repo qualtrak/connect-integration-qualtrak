@@ -12,6 +12,9 @@ tests:
   #evaluate-json:
   #  parameter_input: evaluate-json.json
   #  template_file: evaluate-json.template
-  evaluate-json-master:
-    parameter_input: evaluate-json-master.json
-    template_file: evaluate-json-master.template    
+  #evaluate-json-master:
+  #  parameter_input: evaluate-json-master.json
+  #  template_file: evaluate-json-master.template    
+  evaluate-datastreaming-json-master:
+    parameter_input: evaluate-datastreaming-json-master.json
+    template_file: evaluate-datastreaming-json-master.template    

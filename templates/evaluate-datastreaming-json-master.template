@@ -115,8 +115,7 @@
                         "default" : "Amazon Connect Configuration"
                     },
                     "Parameters" : [      
-                        "S3Bucket",
-                        "kinesisStream"
+                        "S3Bucket"
                     ]
                 },
                 {
@@ -209,9 +208,6 @@
                 },
                 "DomainAdminPassword" : {
                     "default" : "Administrator password"
-                },
-                "kinesisStream" : {
-                    "default" : "Which Stream to use"
                 },
                 "ESDomain"      : {
                     "default" : "What name to use"
@@ -422,12 +418,6 @@
             "AllowedPattern" : "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[@\/\"']).*$",
             "ConstraintDescription" : "Password does not meet complexity requirements"
         },
-        "kinesisStream" : {
-            "Type" : "String",
-            "AllowedPattern" : "[a-zA-Z0-9].*",
-            "Description" : "The name of your existing Kinesis Stream",
-            "ConstraintDescription" : "Must not be empty and must contain only alphanumeric characters"
-        },
         "ESDomain"      : {
             "Default" : "evaluate",
             "Type"    : "String",
@@ -589,7 +579,7 @@
                         "Ref" : "S3EvaluateBucket"
                     },
                     "kinesisStream": {
-                        "Ref": "kinesisStream"
+                        "Ref": "DataStreamingStack.Outputs.KinesisStream"
                     },
                     "QSS3BucketName": {
                         "Ref": "EQSS3BucketName"
