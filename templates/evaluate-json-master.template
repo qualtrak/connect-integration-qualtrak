@@ -668,7 +668,7 @@
                         "Ref" : "S3EvaluateBucket"
                     },
                     "kinesisStream": {
-                        "Ref": "DataStreamingStack.Outputs.KinesisStream"
+                        "Fn::GetAtt": "DataStreamingStack.Outputs.KinesisStream"
                     },
                     "QSS3BucketName": {
                         "Ref": "EQSS3BucketName"
