@@ -3,3 +3,4 @@
 ci/evaluate-json.json
 ci/evaluate-json-master.json
 ci/evaluate-datastreaming-json-master.json
+.vscode
