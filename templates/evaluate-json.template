@@ -226,7 +226,9 @@
         "DomainDNSName"    : {
             "Description" : "Fully qualified domain name (FQDN) of the forest root domain e.g. corp.example.com",
             "Type"        : "String",          
-            "AllowedPattern" : "[a-zA-Z0-9]+\\..+"
+            "MaxLength"   : "253",
+            "AllowedPattern" : "(?=^.{4,253}$)(^((?!-)[a-zA-Z0-9-]{1,63}(?<!-)\\.)+[a-zA-Z]{2,63}\\.?$)",
+            "ConstraintDescription" : "Must not be empty, allowed ASCII letters, case insensitive, digits, hyphens ('-'), labels, cannot start or end with a hyphen, trailings dots are allowed, labels can start with numbers, max length of hostname is 253 characters, underscores are not allowed"
         },
         "DBEvaluateUser"   : {
             "Default" : "EvaluateUser",
