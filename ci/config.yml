@@ -6,15 +6,15 @@ global:
   - us-east-1
   reporting: true
 tests:
-  #amazonconnect:
-  #  parameter_input: evaluate-amazonconnect-json.json
-  #  template_file: evaluate-amazonconnect-json.template
-  #evaluate-json:
-  #  parameter_input: evaluate-json.json
-  #  template_file: evaluate-json.template
-  #evaluate-json-master:
-  #  parameter_input: evaluate-json-master.json
-  #  template_file: evaluate-json-master.template    
+  amazonconnect:
+   parameter_input: evaluate-amazonconnect-json.json
+   template_file: evaluate-amazonconnect-json.template
+  evaluate-json:
+   parameter_input: evaluate-json.json
+   template_file: evaluate-json.template
+  evaluate-json-master:
+   parameter_input: evaluate-json-master.json
+   template_file: evaluate-json-master.template    
   evaluate-datastreaming-json-master:
     parameter_input: evaluate-datastreaming-json-master.json
     template_file: evaluate-datastreaming-json-master.template    
