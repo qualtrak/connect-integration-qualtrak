@@ -46,7 +46,7 @@ Your customer's organisation must be using Active Directory, either in AWS (e.g.
 
     Template: `evaluate-json.template`
 
-![Architecture for Qualtrak Integration](docs/diagram.PNG)
+![Architecture for Qualtrak Integration](docs/diagram.PNG) 
 
 For details and launch information, see the [data sheet](https://aws.amazon.com/quickstart/connect/qualtrak/).
 
